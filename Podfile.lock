@@ -1,0 +1,42 @@
+PODS:
+  - Cuckoo (1.2.0):
+    - Cuckoo/Swift (= 1.2.0)
+  - Cuckoo/Swift (1.2.0)
+  - MobiusCore (0.2.0)
+  - MobiusExtras (0.2.0):
+    - MobiusCore (= 0.2.0)
+  - MobiusNimble (0.2.0):
+    - MobiusCore (= 0.2.0)
+    - MobiusTest (= 0.2.0)
+    - Nimble (~> 8.0)
+  - MobiusTest (0.2.0):
+    - MobiusCore (= 0.2.0)
+  - Nimble (8.0.4)
+
+DEPENDENCIES:
+  - Cuckoo (= 1.2.0)
+  - MobiusCore (= 0.2.0)
+  - MobiusExtras (= 0.2.0)
+  - MobiusNimble (= 0.2.0)
+  - MobiusTest (= 0.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Cuckoo
+    - MobiusCore
+    - MobiusExtras
+    - MobiusNimble
+    - MobiusTest
+    - Nimble
+
+SPEC CHECKSUMS:
+  Cuckoo: f5f4e7c308c512cc2dedbdce23f5dc6985cb5173
+  MobiusCore: 3455b9c6157d891c3c6a613cc2cc593e7d6f2e32
+  MobiusExtras: 53b819bf495482a454f5195a7dd8142b61601f59
+  MobiusNimble: cf71307c4f9a82a7d8dd0b4e73a82e2519e04fe3
+  MobiusTest: af7a3daa1907cdd62be5e4f19373965b5faed389
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+
+PODFILE CHECKSUM: 5e7983a6f5d814a1cfcf769f089c986a46881e21
+
+COCOAPODS: 1.8.3
