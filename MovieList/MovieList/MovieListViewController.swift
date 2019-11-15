@@ -37,7 +37,10 @@ class MovieListViewController: UIViewController {
         self.renderer.render(model)
       }
     }
+
     loop.dispatchEvent(.viewCreated)
+
+    tableView.tableFooterView = UIView()
   }
 }
 
@@ -89,13 +92,20 @@ extension MovieListViewController: UITableViewDataSource {
     let card = tableViewOptions[indexPath.row]
 
     cell.movieTitleLabel.text = card.content.title
-//    do {
-//      let data = try Data(contentsOf: URL(string: card.content.movieLogo)!)
-//      let image  = UIImage(data: data)
-//    }
-//    cell.movieImageView.image =
+    MovieService().loadImage(card.content.movieLogo) { image in
+      if let image = image {
+        cell.movieImageView.image = image
+      }
+    }
+
+    cell.movieImageView.image = UIImage(systemName: "film.fill")
 
     return cell
   }
 }
 
+extension MovieListViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    100.0
+  }
+}

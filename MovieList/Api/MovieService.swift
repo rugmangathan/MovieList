@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ApiError: String, Error{
   case invalidUrl
@@ -27,6 +28,24 @@ class MovieService {
   }()
 
   private var dataTask: URLSessionTask?
+
+  func loadImage(_ imageUrl: String, _ completionHandler: @escaping (UIImage?) -> Void) {
+    guard let url: URL = URL(string: imageUrl) else {
+      completionHandler(nil)
+      return
+    }
+
+    dataTask = urlSession.dataTask(with: url) { (data, response, error) in
+      DispatchQueue.main.async {
+        if let data = data {
+          completionHandler(UIImage(data: data))
+        } else {
+          completionHandler(nil)
+        }
+      }
+    }
+    dataTask?.resume()
+  }
 }
 
 // MARK: - Extensions
