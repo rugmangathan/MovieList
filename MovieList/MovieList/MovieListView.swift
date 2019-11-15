@@ -1,5 +1,5 @@
 //
-//  MovieListEvent.swift
+//  MovieListView.swift
 //  MovieList
 //
 //  Created by Captain America on 15/11/19.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum MovieListEvent {
-  case viewCreated
-  case fetchSuccessful(Movie)
-  case fetchFailed
+protocol MovieListView {
+  func showSpinner()
+  func showMovies(_ movie: Movie)
+  func showFailedState(_ message: String)
 }

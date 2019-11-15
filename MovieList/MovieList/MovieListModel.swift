@@ -10,9 +10,9 @@ import Foundation
 
 class MovieListModel {
   let fetchEvent: FetchEvent
-  let result: [Movie]?
+  let result: Movie?
 
-  init(_ fetchEvent: FetchEvent, _ result: [Movie]? = nil) {
+  init(_ fetchEvent: FetchEvent, _ result: Movie? = nil) {
     self.fetchEvent = fetchEvent
     self.result = result
   }

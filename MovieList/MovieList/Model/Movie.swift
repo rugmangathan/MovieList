@@ -16,7 +16,7 @@ struct Movie: Decodable, Equatable {
 
 // MARK: Extensions
 extension Movie {
-  static func fakeMovies() -> [Movie] {
+  static func fakeMovies() -> Movie {
     let actions: [Action] = [
       Action(description: "Submit", deeplink: "iosapp://test")
     ]
@@ -42,12 +42,10 @@ extension Movie {
       content: content
     )
 
-    let movies: [Movie] = [
-      Movie(
-        data: MovieData(cards: [card]),
-        success: true,
-        errors: [:]
-      )]
-    return movies
+    return Movie(
+      data: MovieData(cards: [card]),
+      success: true,
+      errors: [:]
+    )
   }
 }
