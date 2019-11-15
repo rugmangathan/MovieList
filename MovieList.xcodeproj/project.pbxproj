@@ -79,13 +79,10 @@
 		55F855E9237E5B50000B0491 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
-				55F855EA237E5B50000B0491 /* AppDelegate.swift */,
-				55F855EC237E5B50000B0491 /* SceneDelegate.swift */,
-				55F855EE237E5B50000B0491 /* ViewController.swift */,
-				55F855F0237E5B50000B0491 /* Main.storyboard */,
-				55F855F3237E5B50000B0491 /* Assets.xcassets */,
-				55F855F5237E5B50000B0491 /* LaunchScreen.storyboard */,
-				55F855F8237E5B50000B0491 /* Info.plist */,
+				55F8560F237E5BDD000B0491 /* MovieList */,
+				55F8560D237E5BC3000B0491 /* Delegates */,
+				55F8560E237E5BD1000B0491 /* Storyboards */,
+				55F85610237E5BF4000B0491 /* Resources */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -97,6 +94,41 @@
 				55F85603237E5B50000B0491 /* Info.plist */,
 			);
 			path = MovieListTests;
+			sourceTree = "<group>";
+		};
+		55F8560D237E5BC3000B0491 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				55F855EA237E5B50000B0491 /* AppDelegate.swift */,
+				55F855EC237E5B50000B0491 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		55F8560E237E5BD1000B0491 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				55F855F0237E5B50000B0491 /* Main.storyboard */,
+				55F855F5237E5B50000B0491 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		55F8560F237E5BDD000B0491 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				55F855EE237E5B50000B0491 /* ViewController.swift */,
+			);
+			path = MovieList;
+			sourceTree = "<group>";
+		};
+		55F85610237E5BF4000B0491 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55F855F3237E5B50000B0491 /* Assets.xcassets */,
+				55F855F8237E5B50000B0491 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = MovieList/Info.plist;
+				INFOPLIST_FILE = MovieList/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,7 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
-				INFOPLIST_FILE = MovieList/Info.plist;
+				INFOPLIST_FILE = MovieList/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
