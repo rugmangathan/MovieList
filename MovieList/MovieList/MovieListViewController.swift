@@ -10,7 +10,9 @@ import UIKit
 import MobiusCore
 
 class MovieListViewController: UIViewController {
-
+  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+  
   private lazy var effectHandler: MovieListEffectHandler = {
     MovieListEffectHandler(self)
   }()
@@ -25,6 +27,8 @@ class MovieListViewController: UIViewController {
     MovieListViewRenderer(self)
   }()
 
+  private var tableViewOptions: [Card] = []
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -33,28 +37,65 @@ class MovieListViewController: UIViewController {
         self.renderer.render(model)
       }
     }
+    loop.dispatchEvent(.viewCreated)
   }
 }
 
 extension MovieListViewController: MovieListAction {
   func fetchMovies() {
+    MovieService().fetchMovies { (movie, error) in
+      guard error == nil else {
+        self.loop.dispatchEvent(.fetchFailed)
+        return
+      }
 
+      self.loop.dispatchEvent(.fetchSuccessful(movie))
+    }
   }
 }
 
 extension MovieListViewController: MovieListView {
   func showSpinner() {
-
+    activityIndicator.startAnimating()
   }
 
   func showMovies(_ movie: Movie) {
-
+    activityIndicator.stopAnimating()
+    tableViewOptions = movie.data.cards
+    tableView.reloadData()
   }
 
   func showFailedState(_ message: String) {
+    let alertView = UIAlertController(
+      title: "Alert",
+      message: "Failed to load data",
+      preferredStyle: UIAlertController.Style.alert
+    )
+    alertView.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default))
 
+    present(alertView, animated: true)
+  }
+}
+
+extension MovieListViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    tableViewOptions.count
   }
 
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView
+      .dequeueReusableCell(withIdentifier: "MovieListTableViewCell", for: indexPath)
+      as! MovieListTableViewCell
+    let card = tableViewOptions[indexPath.row]
 
+    cell.movieTitleLabel.text = card.content.title
+//    do {
+//      let data = try Data(contentsOf: URL(string: card.content.movieLogo)!)
+//      let image  = UIImage(data: data)
+//    }
+//    cell.movieImageView.image =
+
+    return cell
+  }
 }
 

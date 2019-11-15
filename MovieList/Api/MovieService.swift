@@ -45,7 +45,9 @@ extension MovieService: ApiService {
         }
       } else {
         guard let validData = data else {
-          completionHandler(nil, ApiError.noData)
+          DispatchQueue.main.async {
+            completionHandler(nil, ApiError.noData)
+          }
           return
         }
 
@@ -53,9 +55,13 @@ extension MovieService: ApiService {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
           let movie: Movie = try decoder.decode(Movie.self, from: validData)
-          completionHandler(movie, nil)
+          DispatchQueue.main.async {
+            completionHandler(movie, nil)
+          }
         } catch let decodeError {
-          completionHandler(nil, decodeError)
+          DispatchQueue.main.async {
+            completionHandler(nil, decodeError)
+          }
         }
       }
     }

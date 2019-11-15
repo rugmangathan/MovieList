@@ -10,6 +10,6 @@ import Foundation
 
 enum MovieListEvent {
   case viewCreated
-  case fetchSuccessful(Movie)
+  case fetchSuccessful(Movie?)
   case fetchFailed
 }
