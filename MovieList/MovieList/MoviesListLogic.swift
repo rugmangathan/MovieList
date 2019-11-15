@@ -10,10 +10,11 @@ import MobiusCore
 
 class MovieListLogic {
   static func update(_ model: MovieListModel, _ event: MovieListEvent) -> Next<MovieListModel, MovieListEffect> {
-    if event == .viewCreated {
-      return .next(model, effects: [.fetchMovies])
-    } else {
-      return .noChange
+    switch event {
+      case .viewCreated:
+        return .next(model, effects: [.fetchMovies])
+      case .fetchSuccessful(let movies):
+        return .next(MovieListModel(.fetchSuccessful, movies))
     }
   }
 }

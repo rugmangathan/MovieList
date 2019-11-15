@@ -10,4 +10,5 @@ import Foundation
 
 enum MovieListEvent {
   case viewCreated
+  case fetchSuccessful([Movie])
 }
