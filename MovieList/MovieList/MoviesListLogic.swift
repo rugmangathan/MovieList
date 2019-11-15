@@ -15,6 +15,8 @@ class MovieListLogic {
         return .next(model, effects: [.fetchMovies])
       case .fetchSuccessful(let movies):
         return .next(MovieListModel(.fetchSuccessful, movies))
+      case .fetchFailed:
+        return .next(MovieListModel(.fetchFailed))
     }
   }
 }

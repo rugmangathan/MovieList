@@ -35,7 +35,20 @@ class MovieListLogicTests: XCTestCase {
       .when(MovieListEvent.fetchSuccessful(movies))
       .then(
         assertThatNext(
-          hasModel(MovieListModel(.fetchSuccessful, movies))
+          hasModel(MovieListModel(.fetchSuccessful, movies)),
+          hasNoEffects()
+        )
+    )
+  }
+
+  func test_should_show_no_records_when_fetch_failed() {
+    spec
+      .given(inFlightState)
+      .when(MovieListEvent.fetchFailed)
+      .then(
+        assertThatNext(
+          hasModel(MovieListModel(.fetchFailed)),
+          hasNoEffects()
         )
     )
   }

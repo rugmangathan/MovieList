@@ -11,4 +11,5 @@ import Foundation
 enum FetchEvent : Equatable {
   case inFlight
   case fetchSuccessful
+  case fetchFailed
 }
