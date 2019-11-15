@@ -24,6 +24,11 @@
 		55F8561D237E61C5000B0491 /* MoviesListLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8561C237E61C5000B0491 /* MoviesListLogic.swift */; };
 		55F85620237E62A2000B0491 /* FetchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8561F237E62A2000B0491 /* FetchEvent.swift */; };
 		55F85623237E6306000B0491 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85622237E6306000B0491 /* Movie.swift */; };
+		55F85625237E6AF0000B0491 /* MovieListEffectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85624237E6AF0000B0491 /* MovieListEffectTests.swift */; };
+		55F85627237E6BCB000B0491 /* MovieListEffectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85626237E6BCB000B0491 /* MovieListEffectHandler.swift */; };
+		55F85629237E6C95000B0491 /* MovieListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85628237E6C95000B0491 /* MovieListAction.swift */; };
+		55F8562C237E6EA9000B0491 /* SpyableMovieListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8562B237E6EA9000B0491 /* SpyableMovieListAction.swift */; };
+		55F8562F237E6F61000B0491 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8562E237E6F61000B0491 /* GeneratedMocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,11 @@
 		55F8561C237E61C5000B0491 /* MoviesListLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListLogic.swift; sourceTree = "<group>"; };
 		55F8561F237E62A2000B0491 /* FetchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchEvent.swift; sourceTree = "<group>"; };
 		55F85622237E6306000B0491 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		55F85624237E6AF0000B0491 /* MovieListEffectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListEffectTests.swift; sourceTree = "<group>"; };
+		55F85626237E6BCB000B0491 /* MovieListEffectHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListEffectHandler.swift; sourceTree = "<group>"; };
+		55F85628237E6C95000B0491 /* MovieListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListAction.swift; sourceTree = "<group>"; };
+		55F8562B237E6EA9000B0491 /* SpyableMovieListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableMovieListAction.swift; sourceTree = "<group>"; };
+		55F8562E237E6F61000B0491 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		7FD1AB6C0703BEB574CAC62F /* Pods-MovieListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieListTests/Pods-MovieListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0FF92359E3405A6A8D44BE /* Pods_MovieListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF500ADF20FCEAD89A99E72 /* Pods_MovieList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +128,7 @@
 		55F85600237E5B50000B0491 /* MovieListTests */ = {
 			isa = PBXGroup;
 			children = (
+				55F8562D237E6F29000B0491 /* Mocks */,
 				55F85611237E5F7D000B0491 /* MovieDB */,
 				55F85601237E5B50000B0491 /* MovieListTests.swift */,
 				55F85603237E5B50000B0491 /* Info.plist */,
@@ -146,14 +157,16 @@
 		55F8560F237E5BDD000B0491 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
-				55F85621237E62F9000B0491 /* Model */,
 				55F8561E237E6293000B0491 /* Common */,
-				55F855EE237E5B50000B0491 /* ViewController.swift */,
-				55F85614237E6049000B0491 /* MovieListLoopTypes.swift */,
-				55F8561C237E61C5000B0491 /* MoviesListLogic.swift */,
-				55F85618237E60B5000B0491 /* MovieListEvent.swift */,
+				55F85621237E62F9000B0491 /* Model */,
 				55F8561A237E60CE000B0491 /* MovieListEffect.swift */,
+				55F85618237E60B5000B0491 /* MovieListEvent.swift */,
+				55F85614237E6049000B0491 /* MovieListLoopTypes.swift */,
 				55F85616237E6096000B0491 /* MovieListModel.swift */,
+				55F8561C237E61C5000B0491 /* MoviesListLogic.swift */,
+				55F855EE237E5B50000B0491 /* ViewController.swift */,
+				55F85626237E6BCB000B0491 /* MovieListEffectHandler.swift */,
+				55F85628237E6C95000B0491 /* MovieListAction.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -170,7 +183,9 @@
 		55F85611237E5F7D000B0491 /* MovieDB */ = {
 			isa = PBXGroup;
 			children = (
+				55F85624237E6AF0000B0491 /* MovieListEffectTests.swift */,
 				55F85612237E5FA0000B0491 /* MovieListLogicTests.swift */,
+				55F8562B237E6EA9000B0491 /* SpyableMovieListAction.swift */,
 			);
 			path = MovieDB;
 			sourceTree = "<group>";
@@ -189,6 +204,14 @@
 				55F85622237E6306000B0491 /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		55F8562D237E6F29000B0491 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				55F8562E237E6F61000B0491 /* GeneratedMocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		78CC0F648C6F35D51BFE348F /* Pods */ = {
@@ -238,6 +261,7 @@
 			buildConfigurationList = 55F85609237E5B50000B0491 /* Build configuration list for PBXNativeTarget "MovieListTests" */;
 			buildPhases = (
 				DECFE56C97CE0756718FC023 /* [CP] Check Pods Manifest.lock */,
+				55F8562A237E6D23000B0491 /* Cuckoo - mock generator */,
 				55F855F9237E5B50000B0491 /* Sources */,
 				55F855FA237E5B50000B0491 /* Frameworks */,
 				55F855FB237E5B50000B0491 /* Resources */,
@@ -329,6 +353,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieList/Pods-MovieList-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		55F8562A237E6D23000B0491 /* Cuckoo - mock generator */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cuckoo - mock generator";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/MovieListTests/MovieDB/SpyableMovieListAction.swift\" \n#\"${INPUT_DIR}/WeatherTests/MovieDB/SpyableMovieListView.swift\" \n# ... and so forth, the last line should never end with a backslash\n";
+		};
 		73BDD4F14E555FA35315757A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +440,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F855EF237E5B50000B0491 /* ViewController.swift in Sources */,
+				55F85627237E6BCB000B0491 /* MovieListEffectHandler.swift in Sources */,
+				55F85629237E6C95000B0491 /* MovieListAction.swift in Sources */,
 				55F85619237E60B5000B0491 /* MovieListEvent.swift in Sources */,
 				55F85617237E6096000B0491 /* MovieListModel.swift in Sources */,
 				55F85620237E62A2000B0491 /* FetchEvent.swift in Sources */,
@@ -415,7 +459,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F85602237E5B50000B0491 /* MovieListTests.swift in Sources */,
+				55F8562C237E6EA9000B0491 /* SpyableMovieListAction.swift in Sources */,
 				55F85613237E5FA0000B0491 /* MovieListLogicTests.swift in Sources */,
+				55F85625237E6AF0000B0491 /* MovieListEffectTests.swift in Sources */,
+				55F8562F237E6F61000B0491 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
