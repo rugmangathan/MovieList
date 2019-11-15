@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: MovieListTests/MovieDB/SpyableMovieListAction.swift at 2019-11-15 05:35:48 +0000
+// MARK: - Mocks generated from file: MovieListTests/MovieDB/SpyableMovieListAction.swift at 2019-11-15 05:57:15 +0000
 
 //
 //  SpyableMovieListAction.swift

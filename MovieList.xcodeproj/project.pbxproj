@@ -29,6 +29,10 @@
 		55F85629237E6C95000B0491 /* MovieListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85628237E6C95000B0491 /* MovieListAction.swift */; };
 		55F8562C237E6EA9000B0491 /* SpyableMovieListAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8562B237E6EA9000B0491 /* SpyableMovieListAction.swift */; };
 		55F8562F237E6F61000B0491 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8562E237E6F61000B0491 /* GeneratedMocks.swift */; };
+		55F85631237E7559000B0491 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85630237E7559000B0491 /* Action.swift */; };
+		55F85633237E756C000B0491 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85632237E756C000B0491 /* Content.swift */; };
+		55F85635237E7577000B0491 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85634237E7577000B0491 /* Card.swift */; };
+		55F85637237E75AE000B0491 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85636237E75AE000B0491 /* MovieData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		55F85628237E6C95000B0491 /* MovieListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListAction.swift; sourceTree = "<group>"; };
 		55F8562B237E6EA9000B0491 /* SpyableMovieListAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyableMovieListAction.swift; sourceTree = "<group>"; };
 		55F8562E237E6F61000B0491 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		55F85630237E7559000B0491 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		55F85632237E756C000B0491 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		55F85634237E7577000B0491 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		55F85636237E75AE000B0491 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 		7FD1AB6C0703BEB574CAC62F /* Pods-MovieListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieListTests/Pods-MovieListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0FF92359E3405A6A8D44BE /* Pods_MovieListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF500ADF20FCEAD89A99E72 /* Pods_MovieList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,14 +167,14 @@
 			children = (
 				55F8561E237E6293000B0491 /* Common */,
 				55F85621237E62F9000B0491 /* Model */,
+				55F85628237E6C95000B0491 /* MovieListAction.swift */,
 				55F8561A237E60CE000B0491 /* MovieListEffect.swift */,
+				55F85626237E6BCB000B0491 /* MovieListEffectHandler.swift */,
 				55F85618237E60B5000B0491 /* MovieListEvent.swift */,
 				55F85614237E6049000B0491 /* MovieListLoopTypes.swift */,
 				55F85616237E6096000B0491 /* MovieListModel.swift */,
 				55F8561C237E61C5000B0491 /* MoviesListLogic.swift */,
 				55F855EE237E5B50000B0491 /* ViewController.swift */,
-				55F85626237E6BCB000B0491 /* MovieListEffectHandler.swift */,
-				55F85628237E6C95000B0491 /* MovieListAction.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -201,7 +209,11 @@
 		55F85621237E62F9000B0491 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55F85630237E7559000B0491 /* Action.swift */,
+				55F85634237E7577000B0491 /* Card.swift */,
+				55F85632237E756C000B0491 /* Content.swift */,
 				55F85622237E6306000B0491 /* Movie.swift */,
+				55F85636237E75AE000B0491 /* MovieData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,13 +452,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F855EF237E5B50000B0491 /* ViewController.swift in Sources */,
+				55F85631237E7559000B0491 /* Action.swift in Sources */,
 				55F85627237E6BCB000B0491 /* MovieListEffectHandler.swift in Sources */,
 				55F85629237E6C95000B0491 /* MovieListAction.swift in Sources */,
+				55F85637237E75AE000B0491 /* MovieData.swift in Sources */,
 				55F85619237E60B5000B0491 /* MovieListEvent.swift in Sources */,
 				55F85617237E6096000B0491 /* MovieListModel.swift in Sources */,
 				55F85620237E62A2000B0491 /* FetchEvent.swift in Sources */,
+				55F85635237E7577000B0491 /* Card.swift in Sources */,
 				55F85623237E6306000B0491 /* Movie.swift in Sources */,
 				55F855EB237E5B50000B0491 /* AppDelegate.swift in Sources */,
+				55F85633237E756C000B0491 /* Content.swift in Sources */,
 				55F8561B237E60CE000B0491 /* MovieListEffect.swift in Sources */,
 				55F8561D237E61C5000B0491 /* MoviesListLogic.swift in Sources */,
 				55F85615237E6049000B0491 /* MovieListLoopTypes.swift in Sources */,

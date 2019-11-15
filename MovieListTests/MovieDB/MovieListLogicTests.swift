@@ -29,7 +29,7 @@ class MovieListLogicTests: XCTestCase {
   }
 
   func test_should_show_movie_list_when_fetching_movie_is_successful() {
-    let movies = [Movie()]
+    let movies = Movie.fakeMovies()
     spec
       .given(inFlightState)
       .when(MovieListEvent.fetchSuccessful(movies))
