@@ -41,6 +41,7 @@ class MovieListViewController: UIViewController {
     loop.dispatchEvent(.viewCreated)
 
     tableView.tableFooterView = UIView()
+
   }
 }
 
@@ -107,5 +108,10 @@ extension MovieListViewController: UITableViewDataSource {
 extension MovieListViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     100.0
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let detailView = MovieDetailViewController.instantiate(tableViewOptions[indexPath.row])
+    navigationController?.pushViewController(detailView, animated: true)
   }
 }

@@ -38,6 +38,7 @@
 		55F85640237E7C6F000B0491 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8563F237E7C6F000B0491 /* MovieListView.swift */; };
 		55F85642237E7CB8000B0491 /* MovieListViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85641237E7CB8000B0491 /* MovieListViewRenderer.swift */; };
 		55F85644237E7F37000B0491 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85643237E7F37000B0491 /* MovieListTableViewCell.swift */; };
+		55F85649237E8F6D000B0491 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85648237E8F6D000B0491 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		55F8563F237E7C6F000B0491 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		55F85641237E7CB8000B0491 /* MovieListViewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewRenderer.swift; sourceTree = "<group>"; };
 		55F85643237E7F37000B0491 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
+		55F85648237E8F6D000B0491 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		7FD1AB6C0703BEB574CAC62F /* Pods-MovieListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieListTests/Pods-MovieListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0FF92359E3405A6A8D44BE /* Pods_MovieListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF500ADF20FCEAD89A99E72 /* Pods_MovieList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 			children = (
 				55F85638237E7615000B0491 /* Api */,
 				55F8560D237E5BC3000B0491 /* Delegates */,
+				55F85647237E8EE4000B0491 /* MovieDetail */,
 				55F8560F237E5BDD000B0491 /* MovieList */,
 				55F85610237E5BF4000B0491 /* Resources */,
 				55F8560E237E5BD1000B0491 /* Storyboards */,
@@ -184,11 +187,11 @@
 				55F85618237E60B5000B0491 /* MovieListEvent.swift */,
 				55F85614237E6049000B0491 /* MovieListLoopTypes.swift */,
 				55F85616237E6096000B0491 /* MovieListModel.swift */,
-				55F8561C237E61C5000B0491 /* MoviesListLogic.swift */,
-				55F855EE237E5B50000B0491 /* MovieListViewController.swift */,
-				55F8563F237E7C6F000B0491 /* MovieListView.swift */,
-				55F85641237E7CB8000B0491 /* MovieListViewRenderer.swift */,
 				55F85643237E7F37000B0491 /* MovieListTableViewCell.swift */,
+				55F8563F237E7C6F000B0491 /* MovieListView.swift */,
+				55F855EE237E5B50000B0491 /* MovieListViewController.swift */,
+				55F85641237E7CB8000B0491 /* MovieListViewRenderer.swift */,
+				55F8561C237E61C5000B0491 /* MoviesListLogic.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -247,6 +250,14 @@
 				55F8563D237E7692000B0491 /* MovieService.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		55F85647237E8EE4000B0491 /* MovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				55F85648237E8F6D000B0491 /* MovieDetailViewController.swift */,
+			);
+			path = MovieDetail;
 			sourceTree = "<group>";
 		};
 		78CC0F648C6F35D51BFE348F /* Pods */ = {
@@ -494,6 +505,7 @@
 				55F85640237E7C6F000B0491 /* MovieListView.swift in Sources */,
 				55F8561D237E61C5000B0491 /* MoviesListLogic.swift in Sources */,
 				55F85615237E6049000B0491 /* MovieListLoopTypes.swift in Sources */,
+				55F85649237E8F6D000B0491 /* MovieDetailViewController.swift in Sources */,
 				55F855ED237E5B50000B0491 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
