@@ -41,6 +41,7 @@ class MovieListViewController: UIViewController {
     loop.dispatchEvent(.viewCreated)
 
     tableView.tableFooterView = UIView()
+    tableView.accessibilityIdentifier = "MovieListTableView"
 
   }
 }
