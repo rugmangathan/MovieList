@@ -23,29 +23,31 @@ class MovieListUITests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
 
-  func testshowDetailView() {
-    // UI tests must launch the application that they test.
-
+  func testShowDetailView() {
     let app = XCUIApplication()
     app.launch()
     let tableView: XCUIElement = app.tables["MovieListTableView"]
     XCTAssertTrue(tableView.exists, "Movie table view available")
-    let cells = tableView.cells
 
+    let cells = tableView.cells
     if cells.count > 0 {
       let count: Int = cells.count - 1
       let promise = expectation(description: "wait for tableview cells")
+
       for i in stride(from: 0, to: count, by: 1) {
         let tableCell = cells.element(boundBy: i)
         XCTAssertTrue(tableCell.exists, "The cell exist at index \(i)")
+
         let cellText = tableCell.staticTexts.element(boundBy: 0).label
         tableCell.tap()
         XCTAssertTrue(app.navigationBars[cellText].exists, "Detail view navigation title available")
+
         if i == (count - 1) {
-            promise.fulfill()
+          promise.fulfill()
         }
         app.navigationBars[cellText].buttons["MovieDB"].tap()
       }
+
       waitForExpectations(timeout: 1000.0, handler: nil)
       XCTAssertTrue(true, "Finished validating table view cells")
     } else {
