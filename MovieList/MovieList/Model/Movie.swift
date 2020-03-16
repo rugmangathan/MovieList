@@ -8,12 +8,15 @@
 
 import Foundation
 
-typealias MovieError = [String : String]
+struct MovieError: Decodable, Equatable {
+  let title: String
+  let message: String
+}
 
 struct Movie: Decodable, Equatable {
   let data: MovieData
   let success: Bool
-  let errors: [MovieError]
+  let errors: MovieError
 }
 
 // MARK: Extensions
@@ -47,7 +50,7 @@ extension Movie {
     return Movie(
       data: MovieData(cards: [card]),
       success: true,
-      errors: [[:]]
+      errors: MovieError(title: "Soemthing went wrong", message: "Some random error")
     )
   }
 }
