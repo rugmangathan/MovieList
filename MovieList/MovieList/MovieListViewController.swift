@@ -17,7 +17,7 @@ class MovieListViewController: UIViewController {
     MovieListEffectHandler(self)
   }()
 
-  private lazy var loop: MobiusLoop<MovieListLoopTypes> = {
+  private lazy var loop = {
     Mobius
       .loop(update: MovieListLogic.update, effectHandler: effectHandler)
       .start(from: MovieListModel(.inFlight))

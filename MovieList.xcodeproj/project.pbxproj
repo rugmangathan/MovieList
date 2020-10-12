@@ -18,7 +18,6 @@
 		55F855F7237E5B50000B0491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F855F5237E5B50000B0491 /* LaunchScreen.storyboard */; };
 		55F85602237E5B50000B0491 /* MovieListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85601237E5B50000B0491 /* MovieListTests.swift */; };
 		55F85613237E5FA0000B0491 /* MovieListLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85612237E5FA0000B0491 /* MovieListLogicTests.swift */; };
-		55F85615237E6049000B0491 /* MovieListLoopTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85614237E6049000B0491 /* MovieListLoopTypes.swift */; };
 		55F85617237E6096000B0491 /* MovieListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85616237E6096000B0491 /* MovieListModel.swift */; };
 		55F85619237E60B5000B0491 /* MovieListEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F85618237E60B5000B0491 /* MovieListEvent.swift */; };
 		55F8561B237E60CE000B0491 /* MovieListEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8561A237E60CE000B0491 /* MovieListEffect.swift */; };
@@ -80,7 +79,6 @@
 		55F85601237E5B50000B0491 /* MovieListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTests.swift; sourceTree = "<group>"; };
 		55F85603237E5B50000B0491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F85612237E5FA0000B0491 /* MovieListLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListLogicTests.swift; sourceTree = "<group>"; };
-		55F85614237E6049000B0491 /* MovieListLoopTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListLoopTypes.swift; sourceTree = "<group>"; };
 		55F85616237E6096000B0491 /* MovieListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListModel.swift; sourceTree = "<group>"; };
 		55F85618237E60B5000B0491 /* MovieListEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListEvent.swift; sourceTree = "<group>"; };
 		55F8561A237E60CE000B0491 /* MovieListEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListEffect.swift; sourceTree = "<group>"; };
@@ -219,7 +217,6 @@
 				55F8561A237E60CE000B0491 /* MovieListEffect.swift */,
 				55F85626237E6BCB000B0491 /* MovieListEffectHandler.swift */,
 				55F85618237E60B5000B0491 /* MovieListEvent.swift */,
-				55F85614237E6049000B0491 /* MovieListLoopTypes.swift */,
 				55F85616237E6096000B0491 /* MovieListModel.swift */,
 				55F85643237E7F37000B0491 /* MovieListTableViewCell.swift */,
 				55F8563F237E7C6F000B0491 /* MovieListView.swift */,
@@ -602,7 +599,6 @@
 				55F8561B237E60CE000B0491 /* MovieListEffect.swift in Sources */,
 				55F85640237E7C6F000B0491 /* MovieListView.swift in Sources */,
 				55F8561D237E61C5000B0491 /* MoviesListLogic.swift in Sources */,
-				55F85615237E6049000B0491 /* MovieListLoopTypes.swift in Sources */,
 				55F85649237E8F6D000B0491 /* MovieDetailViewController.swift in Sources */,
 				55F855ED237E5B50000B0491 /* SceneDelegate.swift in Sources */,
 			);
@@ -661,6 +657,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MovieListUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -681,6 +679,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X24545VLSC;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = MovieListUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

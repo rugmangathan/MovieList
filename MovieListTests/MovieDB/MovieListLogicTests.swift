@@ -11,7 +11,7 @@ import MobiusTest
 @testable import MovieList
 
 class MovieListLogicTests: XCTestCase {
-  private let spec = UpdateSpec<MovieListLoopTypes>(MovieListLogic.update)
+  private let spec = UpdateSpec<MovieListModel, MovieListEvent, MovieListEffect>(MovieListLogic.update)
   private lazy var inFlightState: MovieListModel = {
     MovieListModel(.inFlight)
   }()
