@@ -16,7 +16,7 @@ enum ApiError: String, Error{
 
 class MovieService {
   private lazy var baseUrl: String = {
-    "https://twhiring-40b28.firebaseapp.com/interview_ios.json"
+    "https://run.mocky.io/v3/2c021b7a-ab3c-4104-9327-4d6c464eff4e"
   }()
 
   private lazy var configuration: URLSessionConfiguration = {
