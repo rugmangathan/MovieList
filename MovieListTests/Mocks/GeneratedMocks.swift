@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: MovieListTests/MovieDB/SpyableMovieListAction.swift at 2020-10-12 13:37:17 +0000
+// MARK: - Mocks generated from file: MovieListTests/MovieDB/SpyableMovieListAction.swift at 2022-08-19 15:22:25 +0000
 
 //
 //  SpyableMovieListAction.swift
@@ -12,6 +12,10 @@ import Cuckoo
 @testable import MovieList
 
 import MovieList
+
+
+
+
 
 
  class MockSpyableMovieListAction: SpyableMovieListAction, Cuckoo.ClassMock {
@@ -39,9 +43,13 @@ import MovieList
     
     
     
+    
      override func fetchMovies()  {
         
-    return cuckoo_manager.call("fetchMovies()",
+    return cuckoo_manager.call(
+    """
+    fetchMovies()
+    """,
             parameters: (),
             escapingParameters: (),
             superclassCall:
@@ -52,44 +60,58 @@ import MovieList
         
     }
     
+    
 
-	 struct __StubbingProxy_SpyableMovieListAction: Cuckoo.StubbingProxy {
-	    private let cuckoo_manager: Cuckoo.MockManager
-	
-	     init(manager: Cuckoo.MockManager) {
-	        self.cuckoo_manager = manager
-	    }
-	    
-	    
-	    func fetchMovies() -> Cuckoo.ClassStubNoReturnFunction<()> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return .init(stub: cuckoo_manager.createStub(for: MockSpyableMovieListAction.self, method: "fetchMovies()", parameterMatchers: matchers))
-	    }
-	    
-	}
+     struct __StubbingProxy_SpyableMovieListAction: Cuckoo.StubbingProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+    
+         init(manager: Cuckoo.MockManager) {
+            self.cuckoo_manager = manager
+        }
+        
+        
+        
+        
+        func fetchMovies() -> Cuckoo.ClassStubNoReturnFunction<()> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return .init(stub: cuckoo_manager.createStub(for: MockSpyableMovieListAction.self, method:
+    """
+    fetchMovies()
+    """, parameterMatchers: matchers))
+        }
+        
+        
+    }
 
-	 struct __VerificationProxy_SpyableMovieListAction: Cuckoo.VerificationProxy {
-	    private let cuckoo_manager: Cuckoo.MockManager
-	    private let callMatcher: Cuckoo.CallMatcher
-	    private let sourceLocation: Cuckoo.SourceLocation
-	
-	     init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
-	        self.cuckoo_manager = manager
-	        self.callMatcher = callMatcher
-	        self.sourceLocation = sourceLocation
-	    }
-	
-	    
-	
-	    
-	    @discardableResult
-	    func fetchMovies() -> Cuckoo.__DoNotUse<(), Void> {
-	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
-	        return cuckoo_manager.verify("fetchMovies()", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
-	    }
-	    
-	}
+     struct __VerificationProxy_SpyableMovieListAction: Cuckoo.VerificationProxy {
+        private let cuckoo_manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+    
+         init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            self.cuckoo_manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+    
+        
+    
+        
+        
+        
+        @discardableResult
+        func fetchMovies() -> Cuckoo.__DoNotUse<(), Void> {
+            let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+            return cuckoo_manager.verify(
+    """
+    fetchMovies()
+    """, callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+        
+        
+    }
 }
+
 
  class SpyableMovieListActionStub: SpyableMovieListAction {
     
@@ -97,9 +119,16 @@ import MovieList
     
 
     
+    
+    
+    
      override func fetchMovies()   {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
     
+    
 }
+
+
+
 

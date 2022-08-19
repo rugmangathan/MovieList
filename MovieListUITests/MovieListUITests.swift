@@ -23,9 +23,12 @@ class MovieListUITests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
 
-  func testShowDetailView() {
+/*  func testShowDetailView() {
     let app = XCUIApplication()
     app.launch()
+
+    app.tables["MovieListTableView"].cells.containing(.staticText, identifier:"Hello, Dolly!").element.tap()
+
     let tableView: XCUIElement = app.tables["MovieListTableView"]
     XCTAssertTrue(tableView.exists, "Movie table view available")
 
@@ -53,7 +56,7 @@ class MovieListUITests: XCTestCase {
     } else {
       XCTAssert(false, "was not able to find table view cells")
     }
-  }
+  }*/
 
   func testLaunchPerformance() {
     if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {

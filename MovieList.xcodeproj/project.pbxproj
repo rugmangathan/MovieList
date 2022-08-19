@@ -41,6 +41,7 @@
 		63C4682428AFD359007C634E /* MobiusExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 63C4682328AFD359007C634E /* MobiusExtras */; };
 		63C4682628AFD359007C634E /* MobiusNimble in Frameworks */ = {isa = PBXBuildFile; productRef = 63C4682528AFD359007C634E /* MobiusNimble */; };
 		63C4682828AFD359007C634E /* MobiusTest in Frameworks */ = {isa = PBXBuildFile; productRef = 63C4682728AFD359007C634E /* MobiusTest */; };
+		63DE472C28AFE06300879971 /* Cuckoo in Frameworks */ = {isa = PBXBuildFile; productRef = 63DE472B28AFE06300879971 /* Cuckoo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 			files = (
 				63C4682628AFD359007C634E /* MobiusNimble in Frameworks */,
 				63C4682828AFD359007C634E /* MobiusTest in Frameworks */,
+				63DE472C28AFE06300879971 /* Cuckoo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +146,6 @@
 				55F85600237E5B50000B0491 /* MovieListTests */,
 				55A2AC992382EA5200790AE1 /* MovieListUITests */,
 				55F855E8237E5B50000B0491 /* Products */,
-				78CC0F648C6F35D51BFE348F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -283,13 +284,6 @@
 			path = MovieDetail;
 			sourceTree = "<group>";
 		};
-		78CC0F648C6F35D51BFE348F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +344,7 @@
 			packageProductDependencies = (
 				63C4682528AFD359007C634E /* MobiusNimble */,
 				63C4682728AFD359007C634E /* MobiusTest */,
+				63DE472B28AFE06300879971 /* Cuckoo */,
 			);
 			productName = MovieListTests;
 			productReference = 55F855FD237E5B50000B0491 /* MovieListTests.xctest */;
@@ -389,6 +384,7 @@
 			mainGroup = 55F855DE237E5B50000B0491;
 			packageReferences = (
 				63C4682028AFD359007C634E /* XCRemoteSwiftPackageReference "Mobius" */,
+				63DE472A28AFE06300879971 /* XCRemoteSwiftPackageReference "Cuckoo" */,
 			);
 			productRefGroup = 55F855E8237E5B50000B0491 /* Products */;
 			projectDirPath = "";
@@ -445,7 +441,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/MovieListTests/MovieDB/SpyableMovieListAction.swift\" \n#\"${INPUT_DIR}/WeatherTests/MovieDB/SpyableMovieListView.swift\" \n# ... and so forth, the last line should never end with a backslash\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/Mocks/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PROJECT_DIR}/run\" --download generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/MovieListTests/MovieDB/SpyableMovieListAction.swift\" \n#\"${INPUT_DIR}/WeatherTests/MovieDB/SpyableMovieListView.swift\" \n# ... and so forth, the last line should never end with a backslash\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -821,6 +817,14 @@
 				version = 0.5.0;
 			};
 		};
+		63DE472A28AFE06300879971 /* XCRemoteSwiftPackageReference "Cuckoo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Brightify/Cuckoo";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -843,6 +847,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 63C4682028AFD359007C634E /* XCRemoteSwiftPackageReference "Mobius" */;
 			productName = MobiusTest;
+		};
+		63DE472B28AFE06300879971 /* Cuckoo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63DE472A28AFE06300879971 /* XCRemoteSwiftPackageReference "Cuckoo" */;
+			productName = Cuckoo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
