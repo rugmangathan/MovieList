@@ -5,4 +5,6 @@
 
 WeatherTests/Mocks/GeneratedMocks.swift
 
-Pods/
+xcuserdata
+
+.DS_Store
